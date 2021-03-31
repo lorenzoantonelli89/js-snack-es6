@@ -4,7 +4,7 @@ function getRandomValue(min, max) {
     return Math.floor(Math.random() * localMax) + localMin;
 }
 
-// creare un array di oggetti ogni oggetto descriverà una bii
+// creare un array di oggetti ogni oggetto descriverà una bici
 // da corsa con le seguenti proprietà: nome e peso
 // stampare a schermo la bici con peso minore
 
@@ -72,11 +72,29 @@ function es2() {
     console.log(teams);
     console.log('Array di oggetti con solo nome e penalty');
     console.log(arrTeams);
+    console.log('');
+}
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+function es3(array, a, b) {
+    const newArray = [];
+    array.forEach((elem, i) =>  {
+        if ((i >= a) && (i <= b)) {
+            newArray.push(elem);
+        }
+    });
+    return newArray;
 }
 
 function init() {
     es1();
     es2();
+    const newArr = es3(array, 3, 9);
+
+    console.log('ESERCIZIO 3');
+    console.log("L'array originale è: " + array);
+    console.log("Il nuovo array è: " + newArr);
 }
 
 $(document).ready(init);
